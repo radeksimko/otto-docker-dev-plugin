@@ -43,7 +43,7 @@ Such port range may be then used in `docker-compose.yml` as host ports.
 
 It would be nice to have dynamic allocation of both,
 but that's a feature request for Vagrant as normally
-Vagrant requires `reload` when changing forwarded ports.
+Vagrant requires `reload` when changing forwarded ports & file shares.
 
 ## Possible solutions
 
