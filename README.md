@@ -50,6 +50,6 @@ to be able to change such things at runtime (not sure about other VM providers).
    - `docker -H tcp://_VAGRANT_VM_IP_:2376`
    - `docker -H tcp://_VAGRANT_VM_IP_:2375`
  - Save valid port and TLS settings (expect TLS to be enabled on `:2376`)
- - Copy certificates to host if necessary (where from?)
+ - :question: Copy certificates to host if necessary (where from?)
  - Run `docker-compose up` using the constructed `DOCKER_*` environment variables from previous steps
- - Figure out how to control `vagrant`, `docker-compose` and `docker` from `otto` (via subcommands?)
+ - :question: Figure out how to control `vagrant`, `docker-compose` and `docker` from `otto` (via subcommands?)
