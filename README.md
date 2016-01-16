@@ -41,3 +41,15 @@ Such port range may be then used in `docker-compose.yml` as host ports.
 
 It would be nice to have dynamic allocation of both, but Virtualbox doesn't seem
 to be able to change such things at runtime (not sure about other VM providers).
+
+## Possible solutions
+
+ - Create `Vagrantfile` with port forwarded range (100 ports in [IANA dynamic port range](https://en.wikipedia.org/wiki/Ephemeral_port) should do)
+ - Run `vagrant up` for the `dockerd` provider
+ - Test if dockerd is listening on IANA ports:
+   - `docker -H tcp://_VAGRANT_VM_IP_:2376`
+   - `docker -H tcp://_VAGRANT_VM_IP_:2375`
+ - Save valid port and TLS settings (expect TLS to be enabled on `:2376`)
+ - Copy certificates to host if necessary (where from?)
+ - Run `docker-compose up` using the constructed `DOCKER_*` environment variables from previous steps
+ - Figure out how to control `vagrant`, `docker-compose` and `docker` from `otto` (via subcommands?)
