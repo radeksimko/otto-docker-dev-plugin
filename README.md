@@ -7,7 +7,9 @@ At the moment this is just proposal.
 ## Motivation
 
 **Vagrant** does have docker support, but it's not very flexible for multi-container apps
-(which if you follow the 12-Factor manifesto is the majority).
+(which if you follow the 12-Factor manifesto is the majority). The Vagrant Docker provisioner
+apparently has a separate DSL stanza for downloading images and for running those.
+Docker Volumes are not a 1st class citizen either. One has to use `run :args` to attach volumes.
 **Vagrant** does not expose dockerd to be easily accessed from outside of the VM
 as opposed to **Docker Machine**.
 
