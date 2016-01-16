@@ -41,8 +41,9 @@ which Vagrant does by default anyway and also statically
 forwarding a specific port range from the VM to the host.
 Such port range may be then used in `docker-compose.yml` as host ports.
 
-It would be nice to have dynamic allocation of both, but Virtualbox doesn't seem
-to be able to change such things at runtime (not sure about other VM providers).
+It would be nice to have dynamic allocation of both,
+but that's a feature request for Vagrant as normally
+Vagrant requires `reload` when changing forwarded ports.
 
 ## Possible solutions
 
